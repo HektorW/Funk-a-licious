@@ -1,0 +1,135 @@
+@font-face {
+  font-family: Prisma;
+  /*src: url(/fonts/HelveticaNeue-UltraLight.otf);*/
+  src: url(/fonts/Prisma.otf);
+}
+@font-face {
+  font-family: Alba;
+  src: url(/fonts/Alba.ttf);
+}
+@font-face {
+  font-family: AlbaS;
+  src: url(/fonts/AlbaS.ttf);
+}
+@font-face {
+  font-family: Neon;
+  src: url(/fonts/Neon.ttf);
+}
+
+canvas {
+  /*border:solid thin rgb(213, 213, 213);*/
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+body {
+  background-image: url(/res/subtlebackgrounds/tree_bark.png);
+}
+
+
+
+.menu {
+  text-align: center;
+  font-family: Neon;
+  color: #AAA;
+}
+
+.menu div {
+  cursor: default;
+  display: inline-block;
+  margin-right:2em;
+  margin-left:2em;
+}
+
+.menu div:hover {
+  color: #555;
+}
+
+.title {
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+  font-family: Prisma;
+  font-size: 5em;
+  font-weight: normal;
+}
+
+.title span {
+  cursor: default;
+  position: relative;
+  top: 0px;
+  transition: top 200ms;
+  -webkit-transition: top 200ms;
+}
+
+.title span:hover {
+  top: -15px;
+}
+
+
+#info {
+  position:absolute;
+  /*top: -100%;*/
+  top: 150px;
+  /*right: 20px;*/
+  left: -500px;
+  width: 400px;
+
+  /*background-color: transparent;*/
+  background-color: rgba(81, 206, 255, 0.6);
+
+  border: solid thin;
+  /*border-color: black;*/
+  border-color: rgba(104, 104, 104, 0.37);
+  border-radius: 5px;
+
+  font-family: Neon;
+
+  /*-webkit-transition: top 1s, color 1s;*/
+  -webkit-transition: left 1s, color 1s, border-color 1s;
+}
+
+#info p {
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: justify;
+}
+
+#info_container:hover #info {
+  /*top: 100px;*/
+  left: 20px;
+  /*border-color: rgba(104, 104, 104, 0.37);*/
+  /*background-color: rgba(81, 206, 255, 0.6);*/
+}
+
+
+
+/*#sounds {
+  display: none;
+  border: solid thin gray;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: rgba(255, 29, 74, 0.78);
+  position: absolute;
+  left:40%;
+}*/
+
+#share_container {
+  cursor: pointer;
+}
+#reset_container {
+  cursor: pointer;
+}
+
+#sounds_container:hover {
+  position: absolute;
+  -webkit-animation: negative-shake 1s infinite;
+}
+
+@-webkit-keyframes negative-shake {
+  0% { left: 0px; }
+  25% { left: -20px; }
+  75% { left: 20px; }
+  100% { left: 0px; }
+}
