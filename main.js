@@ -131,8 +131,7 @@ APP.initHandlers = function() {
         APP.touchStart(ev.pageX, ev.pageY);
         ev.preventDefault();
       }
-
-  })
+    })
     .on('mousemove', function(ev) {
       if(APP.mouse_down) {
         APP.onTouch(ev.pageX, ev.pageY);
